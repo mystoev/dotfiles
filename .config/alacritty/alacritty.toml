@@ -1,0 +1,15 @@
+[window]
+
+decorations = "Buttonless"
+startup_mode = "Maximized"
+padding = { x = 5, y = 5 }
+
+[font]
+
+normal = { family = "Hack Nerd Font", style = "Regular" }
+size = 14
+
+[selection]
+
+save_to_clipboard = true
+
