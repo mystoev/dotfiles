@@ -5,6 +5,10 @@ fi
 export PATH=$(brew --prefix)/bin:$PATH 
 export PATH="$HOME/.local/bin:$PATH"
 
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+
 alias vim=nvim
 alias gc="git commit" 
 alias gco="git checkout"
