@@ -13,6 +13,7 @@ alias vim=nvim
 alias gc="git commit" 
 alias gco="git checkout"
 alias tf='terraform'
+alias =td='tmux detach'
 
 eval "$(zoxide init --cmd cd zsh)"
 
