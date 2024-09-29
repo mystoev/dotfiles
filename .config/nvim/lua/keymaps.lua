@@ -1,18 +1,35 @@
 local keymap = vim.keymap
 
-keymap.set('n', 'x', '"_x')
+local opts = { noremap = true, silent = true }
 
-keymap.set('n', "+", "<C-a>")
-keymap.set('n', "-", "<C-x>")
+keymap.set('n', 'x', '"_x', opts)
 
-keymap.set("n", "<leader>-", ":split<CR>", { desc = "Split Window Below", remap = true })
-keymap.set("n", "<leader>|", ":vsplit<CR>", { desc = "Split Window Right", remap = true })
+keymap.set('n', "+", "<C-a>", opts)
+keymap.set('n', "-", "<C-x>", opts)
 
-keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
-keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
-keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
-keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+keymap.set("n", "<leader>ln", "<cmd>set wrap!<CR>", opts)
 
-keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Go to next tab", remap = true })
-keymap.set("n", "<S-Tab>", ":bprev<CR>", { desc = "Go to prev tab", remap = true })
-keymap.set("n", "<leader>x", ":bd<CR>", { desc = "Close buffer", remap = true })
+keymap.set("n", "<leader>-", ":split<CR>", opts)
+keymap.set("n", "<leader>|", ":vsplit<CR>", opts)
+
+keymap.set("n", "<C-h>", "<C-w>h", opts)
+keymap.set("n", "<C-j>", "<C-w>j", opts)
+keymap.set("n", "<C-k>", "<C-w>k", opts)
+keymap.set("n", "<C-l>", "<C-w>l", opts)
+
+keymap.set("n", "<Tab>", ":bnext<CR>", opts)
+keymap.set("n", "<S-Tab>", ":bprev<CR>", opts)
+keymap.set("n", "<leader>x", ":bd<CR>", opts)
+
+keymap.set("n", "<C-d>", "<C-d>zz", opts)
+keymap.set("n", "<C-u>", "<C-u>zz", opts)
+keymap.set("n", "n", "nzzzv", opts)
+keymap.set("n", "N", "Nzzzv", opts)
+
+keymap.set("n", "<leader>v", "<C-w>v", opts)
+keymap.set("n", "<leader>h", "<C-w>s", opts)
+
+keymap.set("n", "<Up>", ":resize -3<CR>", opts)
+keymap.set("n", "<Down>", ":resize +3<CR>", opts)
+keymap.set("n", "<Left>", ":vertical resize -3<CR>", opts)
+keymap.set("n", "<Right>", ":vertical resize +3<CR>", opts)
